@@ -163,6 +163,9 @@ alias dcdev-build="docker-compose -f docker-compose.dev.yml up --build"
 ## Misc
 alias plugins-daily='open "https://jira.showpad.io/secure/Dashboard.jspa?selectPageId=19500" && open "https://jira.showpad.io/secure/RapidBoard.jspa?rapidView=560" && open "https://pickerwheel.com/pw?id=mxvjK"'
 
+# Key Bindings
+bindkey -s ^f "tmux-sessionizer\n"
+
 
 
 
