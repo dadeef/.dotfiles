@@ -6,6 +6,7 @@ set shiftwidth=4
 set expandtab
 set smartindent
 set termguicolors
+highlight CocErrorFloat ctermfg=15
 
 call plug#begin('~/.vim/plugged')
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -27,6 +28,12 @@ endif
 if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
   let g:coc_global_extensions += ['coc-eslint']
 endif
+"autocomplete suggestion on tab
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 "remaps
 let mapleader= " "
 nnoremap <leader>b :Vex<CR>
