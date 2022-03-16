@@ -1,4 +1,4 @@
-set scrolloff=8
+
 set number
 set relativenumber
 set tabstop=4 softtabstop=4
@@ -34,9 +34,22 @@ inoremap <silent><expr> <TAB>
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+ endfunction
+
+" Use <c-space> to trigger completion.
+inoremap <silent><expr> <c-@> coc#refresh()
+" Make <CR> auto-select the first completion item and notify coc.nvim to
+" format on enter, <cr> could be remapped by other vim plugin
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
 "remaps
 let mapleader= " "
-nnoremap <leader>b :Vex<CR>
+nnoremap <leader>b :Ex<CR>
+nnoremap <leader>B :Vex<CR>
 nnoremap <leader><CR> :so ~/.vimrc<CR>
 nnoremap <C-p> :GFiles<CR>
 nnoremap <leader>pf :Files<CR>
