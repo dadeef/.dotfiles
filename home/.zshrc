@@ -166,6 +166,11 @@ alias plugins-daily='open "https://jira.showpad.io/secure/Dashboard.jspa?selectP
 # Key Bindings
 bindkey -s ^f "tmux-sessionizer\n"
 
+#functions
+killp() {
+    lsof -i tcp:"$1" | grep LISTEN | awk '{print $2}' | xargs kill -9
+}
+
 
 
 
