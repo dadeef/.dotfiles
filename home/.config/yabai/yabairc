@@ -11,8 +11,8 @@
 # see this wiki page for information:
 #  - https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release)
 #
-# sudo yabai --load-sa
-# yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+sudo yabai --load-sa
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 
 # global settings
 yabai -m config mouse_follows_focus          off
@@ -46,7 +46,7 @@ yabai -m config window_gap                   06
 
 
 # kill any existing limelight process if one exists, before we launch a new one
-killall limelight &> /dev/null
-limelight &> /dev/null &
+# killall limelight &> /dev/null
+# limelight &> /dev/null &
 
 echo "yabai configuration loaded.."
