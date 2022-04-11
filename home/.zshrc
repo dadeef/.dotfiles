@@ -155,3 +155,7 @@ load-node-version() {
 }
 add-zsh-hook chpwd load-node-version
 load-node-version
+
+
+# Mediahuis
+export KUBECONFIG=~/MH/kubeconfig
