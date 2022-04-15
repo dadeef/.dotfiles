@@ -108,8 +108,6 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 # aliases
 
-#WPA Testing
-
 # launch chrome canary in unsafe mode (allows keeping regular chrome open)
 alias unsafe-canary="nohup /Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary --new-window --disable-web-security --user-data-dir=/Users⁩/david.derenshowpad.com⁩/Library⁩/⁨Application\ Support⁩/⁨Google⁩ --ignore-certificate-errors"
 # launch chrome in unsafe mode (allows keeping regular chrome open)
@@ -117,7 +115,7 @@ alias unsafe-chrome="nohup /Applications/Google\ Chrome.app/Contents/MacOS/Googl
 
 # Mine
 alias copy-ip="ipconfig getifaddr en0 | pbcopy"
-
+alias yarn-ci="yarn install --frozen-lockfile"
 # Docker
 # alias dnuke="docker stop $(docker ps -qa) && docker system prune -af --volumes"
 alias dnuke="docker ps -qa | xargs -t docker stop && docker system prune -af --volumes"
