@@ -1,2 +1,6 @@
 
 .DS_Store
+
+bin/usr/local/bin/pip*
+
+home/.vim/autoload/plug.vim
