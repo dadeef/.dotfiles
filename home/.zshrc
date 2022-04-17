@@ -141,6 +141,9 @@ bindkey -s ^f "tmux-sessionizer\n"
 killp() {
     lsof -i tcp:"$1" | grep LISTEN | awk '{print $2}' | xargs kill -9
 }
+showp() {
+    lsof -i tcp:"$1" | grep LISTEN | awk '{print $2}'
+}
 
 # autoload node version if theres a package.json
 autoload -U add-zsh-hook
