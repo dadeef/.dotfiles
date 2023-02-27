@@ -116,6 +116,8 @@ alias unsafe-chrome="nohup /Applications/Google\ Chrome.app/Contents/MacOS/Googl
 # Mine
 alias copy-ip="ipconfig getifaddr en0 | pbcopy"
 alias yarn-ci="yarn install --frozen-lockfile"
+alias proxy="NODE_TLS_REJECT_UNAUTHORIZED=0 arch -x86_64 /usr/local/bin/proxychains4 -f ~/Desktop/proxychains.config"
+
 # Docker
 # alias dnuke="docker stop $(docker ps -qa) && docker system prune -af --volumes"
 alias dnuke="docker ps -qa | xargs -t docker stop && docker system prune -af --volumes"
