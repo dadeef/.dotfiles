@@ -1,6 +1,9 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+#add path to shared bins
+export PATH=$PATH:~/shared-bin
+
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/davidderen/.oh-my-zsh"
 
@@ -109,9 +112,11 @@ source $ZSH/oh-my-zsh.sh
 # aliases
 
 # launch chrome canary in unsafe mode (allows keeping regular chrome open)
-alias unsafe-canary="nohup /Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary --new-window --disable-web-security --user-data-dir=/Users⁩/david.derenshowpad.com⁩/Library⁩/⁨Application\ Support⁩/⁨Google⁩ --ignore-certificate-errors"
+alias unsafe-canary="nohup /Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary --new-window --disable-web-security --user-data-dir=/Users/david.derenshowpad.com/Library/Application\ Support/Google --ignore-certificate-errors --load-extension=~/MH-extensions/fragments-2022-11-14T161853"
 # launch chrome in unsafe mode (allows keeping regular chrome open)
-alias unsafe-chrome="nohup /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --new-window --disable-web-security --user-data-dir=/Users⁩/david.derenshowpad.com⁩/Library⁩/⁨Application\ Support⁩/⁨Google⁩ --ignore-certificate-errors"
+alias unsafe-chrome="nohup /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --new-window --disable-web-security --user-data-dir=/Users/david.derenshowpad.com/Library/Application\ Support/Google --ignore-certificate-errors"
+
+alias install-MH-extensions="nohup /Applications/Arc.app/Contents/MacOS/Arc --load-extension=~/MH-extensions/fragments-2022-11-14T161853 --new-window" 
 
 # Mine
 alias copy-ip="ipconfig getifaddr en0 | pbcopy"
