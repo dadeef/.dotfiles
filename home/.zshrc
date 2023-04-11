@@ -166,4 +166,5 @@ load-node-version
 
 
 # Mediahuis
-export KUBECONFIG=~/MH/kubeconfig
+alias k-dev="export KUBECONFIG=~/MH/kubeconfig-dev"
+alias k-prod="export KUBECONFIG=~/MH/kubeconfig-prod"
