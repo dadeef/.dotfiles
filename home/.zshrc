@@ -121,7 +121,7 @@ alias install-MH-extensions="nohup /Applications/Arc.app/Contents/MacOS/Arc --lo
 # Mine
 alias copy-ip="ipconfig getifaddr en0 | pbcopy"
 alias yarn-ci="yarn install --frozen-lockfile"
-alias proxy="NODE_TLS_REJECT_UNAUTHORIZED=0 arch -x86_64 /usr/local/bin/proxychains4 -f ~/Desktop/proxychains.config"
+alias proxy="NODE_TLS_REJECT_UNAUTHORIZED=0 arch -x86_64 /usr/local/bin/usr/local/bin/proxychains4 -f ~/proxychains.config"
 
 # Docker
 # alias dnuke="docker stop $(docker ps -qa) && docker system prune -af --volumes"
