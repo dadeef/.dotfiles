@@ -165,6 +165,5 @@ add-zsh-hook chpwd load-node-version
 load-node-version
 
 
-# Mediahuis
-alias k-dev="export KUBECONFIG=~/MH/kubeconfig-dev"
-alias k-prod="export KUBECONFIG=~/MH/kubeconfig-prod"
+# NowJobs
+
